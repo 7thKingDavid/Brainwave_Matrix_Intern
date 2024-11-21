@@ -11,6 +11,58 @@ body {
 
 }
 
+/* intro page */
+
+.page-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; /*  for Full viewport height */
+    
+}
+
+/* Style for the content container */
+.into-container {
+    text-align: center; /* Center text */
+    padding: 20px;
+    background-image: url('../Images/landing-page.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    border-radius: 10px; 
+    color: rgb(247, 243, 8); 
+}
+
+/*Style for the h1 and p elements inside the container */
+.into-container h1,
+.into-container p {
+    padding: 10px;
+    border-radius: 5px; 
+    background-color: rgba(10, 9, 9, 0.5);
+}
+
+/*Style for the button */
+.get-started-btn {
+    background-color: #007bff; 
+    color: white; 
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px; 
+}
+
+.get-started-btn:hover {
+    background-color: #0056b3; 
+}
+
+/* now we flip the page with some css animation*/
+.flipped {
+    transform: rotateY(-90deg);
+}
+
+
 /* for the App container */
 .todo-container {
     background: #003366;
