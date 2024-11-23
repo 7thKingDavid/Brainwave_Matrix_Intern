@@ -1,0 +1,254 @@
+/* Loading Spinner */
+.loading-spinner {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-spinner .dot {
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: spin 1s infinite ease-in-out;
+}
+
+.loading-spinner .dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.loading-spinner .dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes spin {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+}
+
+/* Empty State */
+#empty-state {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#empty-text {
+    margin-top: 60px;
+    font-size: 10px;
+    margin-left: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana;
+}
+
+#empty-state-image {
+    margin-top: 60px;
+    width: 30px;
+    height: 30px;
+}
+
+#todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#todo-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+
+/* General Styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: rgb(150, 235, 235);
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    align-items: center;
+
+}
+
+/* intro page */
+
+.page-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; /*  for Full viewport height */
+    
+}
+
+/* Style for the content container */
+.into-container {
+    text-align: center; /* Center text */
+    padding: 20px;
+    background-image: url('../Images/landing-page.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    border-radius: 10px; 
+    color: rgb(247, 243, 8); 
+}
+
+/*Style for the h1 and p elements inside the container */
+.into-container h1,
+.into-container p {
+    padding: 10px;
+    border-radius: 5px; 
+    background-color: rgba(10, 9, 9, 0.5);
+}
+
+/*Style for the button */
+.get-started-btn {
+    background-color: #007bff; 
+    color: white; 
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px; 
+}
+
+.get-started-btn:hover {
+    background-color: #0056b3; 
+}
+
+/* now we flip the page with some css animation*/
+.flipped {
+    transform: rotateY(-90deg);
+}
+
+
+/* for the App container */
+.todo-container {
+    background: #003366;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    overflow: hidden;
+   text-align: center;
+    
+}
+
+.todo-container h1 {
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+}
+.input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px;
+    background-color: #0066cc;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    
+    
+}
+
+button:hover {
+    background-color: #004999;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    background-color: #02275e;
+}
+
+li button {
+    background-color: #dc3545;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+
+}
+
+li button:hover {
+    background-color: #c82333;
+}
+
+/* make it responsive using media query*/
+@media (max-width: 768px) {
+    .todo-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .input-container {
+        flex-direction: column; /* this will stack the input and button */
+        gap: 10px; 
+    }
+
+    input { /* adjusts padding and takes full width for smaller inputs */
+        width: 100%;
+        
+    }
+
+    button {
+        padding: 8px 10px;
+        
+    }
+
+    
+
+}
+
+
